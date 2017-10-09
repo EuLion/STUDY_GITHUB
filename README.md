@@ -1,6 +1,6 @@
 # STUDY_GITHUB
 
-===
+============
 
 This is repository to study gitbub for myself.
 
@@ -22,7 +22,7 @@ None
 
 ## Install
 
-	`$ git clone https://github.com/EuLion/STUDY_GITHUB.git`
+	$ git clone https://github.com/EuLion/STUDY_GITHUB.git
 
 
 ## Contribution

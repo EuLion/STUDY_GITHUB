@@ -1,0 +1,77 @@
+[gitリポジトリの作り方]
+============
+$ mkdir ~/Hello-World
+# "Hello-World"ディレクトリを作ります
+
+$ cd ~/Hello-World
+# 作ったディレクトリに移動します
+
+$ git init
+# 必要なGitファイルを用意します
+# ./.gitディレクトリの中身が空のgitとして初期化されます
+
+$ touch README
+# "README"ファイルをこのディレクトリに作ります
+
+[変更の更新のやり方]
+============
+git add README
+# READMEファイルをコミットするファイルに加えます
+
+git commit -m 'first commit'
+# メッセージ付きでコミットを行います
+
+git remote add origin https://github.com/username/Hello-World.git
+# originと呼ばれる名前でリモートを追加します(リモートのレポジトリで一番良く使うものをoriginとするのが一般的なようです)
+
+git push origin master
+# "master"ブランチのコミット内容をgithubに送ります
+
+[クローンしたリポジトリの取得]
+============
+git clone https://github.com/username/Spoon-Knife.git
+# フォークした"username"さんの"Spoon-Knife"リポジトリをローカルにクローンします
+
+cd Spoon-Knife
+# ディレクトリを変更します
+git remote add upstream https://github.com/octocat/Spoon-Knife.git
+# 元のリポジトリをupstreamと呼ばれるリモートに割り当てます
+
+git fetch upstream
+# あなたのファイルを修正せずに、ローカルに元のリポジトリの変更などを引っ張ります
+
+[ブランチの追加]
+=============
+git branch mybranch
+# "mybranch"という名前で新しいブランチを作ります
+
+git checkout mybranch
+# "mybranch"をアクティブなブランチにします
+# ブランチをスイッチするのにはこのコマンドを使います
+
+## branchしてcheckoutするのが面倒な場合は
+# git checkout -b mybranch
+## とすれば一発でブランチを作ってからアクティブにするまでを行えます
+
+[ブランチの統合]
+=============
+git checkout master
+git merge mybranch
+# "mybranch"から"master"ブランチに変更を追加し、反映させます
+
+git branch -d mybranch
+# "mybranch"ブランチを削除します
+
+[よく使う]
+=============
+git status
+# 現在の状態を知ることができます
+git pull origin master
+# git fetch upstream
+# git merge origin/master
+# と実行するのとほぼ同じ動きをする
+
+[参考]
+=============
+commitとpushしかできない人のためのgithubの使い方まとめ
+(http://myuon-myon.hatenablog.com/entry/20121114/1352906438)

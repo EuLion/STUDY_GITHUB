@@ -2,8 +2,8 @@
 I study how to create readme.
 
 ## Description
--　I get README base style.
--　I actually create README.md.
+- I get README base style.
+- I actually create README.md.
 
 ## Demo
 None
